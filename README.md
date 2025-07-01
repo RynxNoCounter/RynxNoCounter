@@ -26,57 +26,53 @@
 
 ---
 
-### 📊 GitHub Stats
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=Rynx&show_icons=true&theme=tokyonight" height="150"/>
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Rynx&layout=compact&theme=tokyonight" height="150"/>
-</p>
-
----
-
-### 🎮 Minigame: Tebak Bahasa dari Emoji
+### 🎮 Minigame Interaktif
 
 <details>
-<summary>🧠 Klik untuk Mulai Bermain!</summary>
+<summary>🧠 Game 1: Tebak Bahasa dari Emoji</summary>
 
-**Soal 1:**  
-🟦📦📦🕸️💡  
-A. Java  
-B. Python  
-C. JavaScript  
-D. C++
+**Petunjuk:** Pilih jawaban yang menurutmu paling benar, lalu cek jawabannya!
+
+#### Soal 1:
+🟨📦⚙️🕸️  
+> Apa bahasa ini?
+
+- [ ] A. Java  
+- [ ] B. Python  
+- [x] C. JavaScript  
+- [ ] D. Go  
 
 <details>
-<summary>👉 Jawaban</summary>
-C. JavaScript — karena: kotak-kotak mewakili JSON & web.
+<summary>✅ Lihat Jawaban</summary>
+C. JavaScript — karena emoji box (JSON), gear (logic), web.
 </details>
 
 ---
 
-**Soal 2:**  
-🐍🧪👨‍🔬🧠🔢  
-A. Ruby  
-B. C  
-C. Python  
-D. Go
+#### Soal 2:
+🐍🔬🧪🧠📊  
+> Apa bahasa ini?
+
+- [ ] A. Ruby  
+- [ ] B. Java  
+- [x] C. Python  
+- [ ] D. C++
 
 <details>
-<summary>👉 Jawaban</summary>
-C. Python — ikon ular dan eksperimen mewakili Data Science.
+<summary>✅ Lihat Jawaban</summary>
+C. Python — digunakan di data science, AI, dan scripting.
 </details>
 
 </details>
 
 ---
 
-### 🐞 Hidden Bug Challenge
-
 <details>
-<summary>💻 Coba Temukan Bug dalam Kode Ini</summary>
+<summary>🐞 Game 2: Temukan Bug!</summary>
 
 ```js
-function greet(name) {
-  return "Hello, " + name
+function sum(a, b) {
+  return
+    a + b;
 }
-
-console.log(greet())  // Output apa yang muncul?
+console.log(sum(3, 4));
