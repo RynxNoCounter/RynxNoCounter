@@ -2,8 +2,8 @@ name: MiniGame Generator
 
 on:
   schedule:
-    - cron: '0 1 * * *' # jalan setiap jam 1 pagi UTC (08.00 WIB)
-  workflow_dispatch:     # bisa dijalankan manual juga
+    - cron: '0 1 * * *'
+  workflow_dispatch:
 
 jobs:
   generate-minigame:
@@ -17,10 +17,16 @@ jobs:
         run: |
           echo "C. Python — Bahasa ini identik dengan Data Science & AI 🧠" > game-result.txt
 
+      - name: Update README with Game Result
+        run: |
+          GAME_RESULT=$(cat game-result.txt)
+          awk '/<!-- START_GAME -->/{print; print "```\n" ENVIRON["GAME_RESULT"] "\n```"; skip=1; next} /<!-- END_GAME -->/{skip=0} !skip' README.md > README.tmp
+          mv README.tmp README.md
+
       - name: Commit & Push Result
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add game-result.txt
+          git add README.md game-result.txt
           git commit -m "🎮 Update minigame result"
           git push

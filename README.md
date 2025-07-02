@@ -28,6 +28,9 @@
 ### 🎮 Daily MiniGame: Tebak Bahasa
 
 🧠 Soal: `🐍🔬🧪 Bahasa apakah ini?`  
-💬 Jawaban hari ini:  
-```txt
-$(cat game-result.txt)
+💬 Jawaban hari ini:
+
+<!-- START_GAME -->
+<!-- END_GAME -->
+
+> ✅ Diupdate otomatis setiap hari jam 08.00 WIB
