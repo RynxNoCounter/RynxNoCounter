@@ -24,6 +24,7 @@
   <img src="https://img.shields.io/badge/-Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=black" />
 </p>
 
+
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Rynx/Rynx/output/pacman-contribution-graph-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Rynx/Rynx/output/pacman-contribution-graph.svg">
@@ -31,5 +32,3 @@
 </picture>
 
 ###
-
----
