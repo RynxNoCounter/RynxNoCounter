@@ -1,33 +1,32 @@
-name: Generate pacman animation
+
+---
+
+## 2️⃣ `.github/workflows/minigames.yaml`
+
+```yaml
+name: MiniGame Generator
 
 on:
-  schedule: # execute every 12 hours
-    - cron: "* */12 * * *"
-
-  workflow_dispatch:
-
-  push:
-    branches:
-    - main
+  schedule:
+    - cron: '0 1 * * *' # jalan setiap jam 1 pagi UTC (08.00 WIB)
+  workflow_dispatch:     # bisa dijalankan manual juga
 
 jobs:
-  generate:
-    permissions:
-      contents: write
+  generate-minigame:
     runs-on: ubuntu-latest
-    timeout-minutes: 5
 
     steps:
-      - name: generate pacman-contribution-graph.svg
-        uses: abozanona/pacman-contribution-graph@main
-        with:
-          github_user_name: ${{ github.repository_owner }}
+      - name: Checkout Repo
+        uses: actions/checkout@v3
 
+      - name: Generate Minigame Result
+        run: |
+          echo "C. Python" > game-result.txt
 
-      - name: push pacman-contribution-graph.svg to the output branch
-        uses: crazy-max/ghaction-github-pages@v3.1.0
-        with:
-          target_branch: output
-          build_dir: dist
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Commit & Push Result
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add game-result.txt
+          git commit -m "🎮 Update minigame result"
+          git push
