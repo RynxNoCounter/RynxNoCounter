@@ -31,6 +31,9 @@
 💬 Jawaban hari ini:
 
 <!-- START_GAME -->
+```
+
+```
 <!-- END_GAME -->
 
 > ✅ Diupdate otomatis setiap hari jam 08.00 WIB
